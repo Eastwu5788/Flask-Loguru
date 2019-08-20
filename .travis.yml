@@ -6,10 +6,11 @@ python: "3.6"
 
 install:
   - pip install -r requirements.test.txt
+  - pip install coveralls
 
 script:
   - pytest -p no:warnings
+  - coverage run -m pytest -p no:warnings
 
 after_script:
-  - coverage pytest -p no:warnings
-  - coverage report -m
+  - coveralls
