@@ -1,0 +1,36 @@
+# CI/CD 执行4个阶段
+stages:
+  - style    # 检查代码风格
+  - test     # 执行测试
+  - coverage # 覆盖率测试
+
+before_script:
+  - source /home/work/www/flask-loguru/venv/bin/activate
+  - pip install -r requirements.test.txt -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+
+  # 检查代码是否符合PEP8规范
+pep8:
+  stage: style
+  script:
+    - /home/work/www/flask-loguru/venv/bin/flake8 flask-loguru
+  tags:
+    - 181-runner
+
+# 单元测试
+unittest:
+  stage: test
+  script:
+    - /home/work/www/flask-loguru/venv/bin/pytest tests  # 执行单元测试
+  tags:
+    - 181-runner
+
+
+# 覆盖率测试
+coverage:
+  stage: coverage
+  script:
+    - /home/work/www/flask-loguru/venv/bin/coverage run -m pytest -p no:warnings
+    - /home/work/www/flask-loguru/venv/bin/coverage report -m
+  coverage: '/TOTAL\s+\d+\s+\d+\s+(\d+\%)/'
+  tags:
+    - 181-runner
