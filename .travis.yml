@@ -10,3 +10,6 @@ install:
 script:
   - pytest -p no:warnings
 
+after_script:
+  - coverage pytest -p no:warnings
+  - coverage report -m
