@@ -13,9 +13,9 @@ from setuptools import find_packages, setup, Command
 # Package meta-data.
 NAME = 'flask_loguru'
 DESCRIPTION = 'Flask extension of loguru'
-URL = ''
+URL = 'https://github.com/Eastwu5788/Flask-Loguru'
 EMAIL = 'wudong@eastwu.cn'
-AUTHOR = 'Leonard woo'
+AUTHOR = 'LeonardWoo'
 REQUIRES_PYTHON = '>=3.6.0'
 VERSION = None
 
@@ -93,6 +93,7 @@ setup(
     version=about['__version__'],
     description=DESCRIPTION,
     long_description=long_description,
+    long_description_content_type="text/markdown",
     author=AUTHOR,
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,

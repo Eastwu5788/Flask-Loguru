@@ -6,6 +6,10 @@
 #### 安装方式
 ```bash
 python setup.py install
+
+或者
+
+pip install flask-loguru
 ```
 
 #### 配置参数介绍
