@@ -1,6 +1,7 @@
 # Flask-loguru
 [![pipeline status](http://gitlab.attractorcap.com/develop/backend/flask-loguru/badges/master/pipeline.svg)](http://gitlab.attractorcap.com/develop/backend/flask-loguru/commits/master)
 [![coverage report](http://gitlab.attractorcap.com/develop/backend/flask-loguru/badges/master/coverage.svg)](http://gitlab.attractorcap.com/develop/backend/flask-loguru/commits/master)  
+[![Build Status](https://travis-ci.org/Eastwu5788/Flask-Loguru.svg?branch=master)](https://travis-ci.org/Eastwu5788/Flask-Loguru)  
 将loguru改造成flask扩展
 
 #### 安装方式
